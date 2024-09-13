@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Form</title>
+    <link rel="stylesheet" href="resume.css">
+</head>
+<body>
+    <div class="container">
+        <form id="cvForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="fatherName">Father's Name:</label>
+            <input type="text" id="fatherName" name="fatherName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="education">Education:</label>
+            <textarea id="education" name="education" required></textarea>
+
+            <label for="experience">Work Experience:</label>
+            <textarea id="experience" name="experience" required></textarea>
+
+            <label for="skills">Skills:</label>
+            <textarea id="skills" name="skills" required></textarea>
+
+            <label for="photo">Upload Photo:</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+        <div class="btn">
+            <button type="button" onclick="generateCV()">Generate CV</button>
+            <button onclick="window.history.back()">Go back</button>
+           </div>
+        </form>
+
+        <div id="cv">
+            <!-- <h2>YOUR RESUME</h2> -->
+            <img id="cvPhoto" alt="Uploaded Photo" style="display: none;">
+            <br>
+            <!-- <h3>Personal Information</h3> -->
+            <br>
+            <p id="cvName"></p>
+            <p id="cvFatherName"></p>
+            <p id="cvEmail"></p>
+            <p id="cvPhone"></p>
+            <br>
+            <!-- <h3>Education</h3> -->
+            <br>
+            <p id="cvEducation"></p>
+            <br>
+            <!-- <h3>Work Experience</h3> -->
+            <br>
+            <p id="cvExperience"></p>
+            <br>
+            <!-- <h3>Skills</h3> -->
+            <br>
+            <p id="cvSkills"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
