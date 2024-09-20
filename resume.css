@@ -13,8 +13,8 @@ body {
   display: flex;
   justify-content: center; 
   align-items: center;
-  height: 100vh; 
-} 
+  min-height: 100vh; /* Ensure full height for responsiveness */
+}
 
 /* Container styling */
 .container {
@@ -24,6 +24,7 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Prevents content overflow */
 }
 
 /* Form styling */
@@ -105,27 +106,40 @@ h2, h3 {
       font-size: 0.9rem;
   }
 }
-/* FOR BUTTON  */
-button {
-  display: block;
-  width: 50%;
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
+
+/* Hide elements by default */
+.hidden {
+  display: none;
 }
-button:hover {
-  background-color: #0056b3;
-}
-.btn {
+
+/* Flex layout for form buttons */
+.form-buttons {
   display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Flex layout for share and download buttons */
+#share-link, #download-container {
+  display: flex;
+  justify-content: center;
   gap: 10px;
 }
 
-#copy-link , #download-resume {
-  display: flex;
-  margin: 10px;
+#share-link button, #download-resume {
+  padding: 10px 15px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#download-resume {
+  background-color: #4CAF50; /* Green button */
+}
+
+#share-link button {
+  background-color: green; /* Blue button */
 }

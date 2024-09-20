@@ -12,7 +12,7 @@
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
-            <label for="fatherName">Father's Name:</label>
+            <label for="fatherName">Father Name:</label>
             <input type="text" id="fatherName" name="fatherName" required>
 
             <label for="email">Email:</label>
@@ -32,34 +32,41 @@
 
             <label for="photo">Upload Photo:</label>
             <input type="file" id="photo" name="photo" accept="image/*">
-        <div class="btn">
-            <button type="button" onclick="generateCV()">Generate CV</button>
-            <button onclick="window.history.back()">Go back</button>
-           </div>
+
+            <div class="form-buttons">
+                <button type="button" onclick="generateCV()">Generate CV</button>
+                <button type="button" onclick="window.history.back()">Go Back</button>
+            </div>
         </form>
 
-        <div id="cv">
-            <!-- <h2>YOUR RESUME</h2> -->
-            <img id="cvPhoto" alt="Uploaded Photo" style="display: none;">
-            <br>
-            <!-- <h3>Personal Information</h3> -->
-            <br>
+        <!-- CV Section -->
+        <div id="cv" class="hidden">
+            <img id="cvPhoto" alt="Uploaded Photo" class="hidden">
             <p id="cvName"></p>
             <p id="cvFatherName"></p>
             <p id="cvEmail"></p>
             <p id="cvPhone"></p>
-            <br>
-            <!-- <h3>Education</h3> -->
-            <br>
-            <p id="cvEducation"></p>
-            <br>
-            <!-- <h3>Work Experience</h3> -->
-            <br>
-            <p id="cvExperience"></p>
-            <br>
-            <!-- <h3>Skills</h3> -->
-            <br>
-            <p id="cvSkills"></p>
+
+            <h3 id="educationHeading" class="hidden">Education</h3>
+            <p id="cvEducation"></p><br>
+
+            <h3 id="experienceHeading" class="hidden">Work Experience</h3>
+            <p id="cvExperience"></p><br>
+
+            <h3 id="skillsHeading" class="hidden">Skills</h3>
+            <p id="cvSkills"></p><br>
+        </div>
+        <br>
+
+        <!-- Resume URL and Download Buttons -->
+        <div id="share-link" class="hidden">
+            <label for="resume-url">Resume URL:</label>
+            <input type="text" id="resume-url" readonly />
+            <button id="copy-link">Copy Link</button>
+        </div>
+        <br>
+        <div id="download-container" class="hidden">
+            <button id="download-resume">Download Resume</button>
         </div>
     </div>
     <script src="script.js"></script>

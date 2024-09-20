@@ -1,4 +1,5 @@
-* {
+/*        first code css for design */
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -108,5 +109,217 @@ p {
     font-size: 1.2em;
     margin-bottom: 5px;
     color: #f4f4f4;
+} */
+
+/*                                    second code for css                        */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    overflow-x: hidden; /* Prevent horizontal scroll on small screens */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.brand h1 {
+    font-size: 24px;
+    color: white;
+    letter-spacing: 0.8px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding-right: 50px;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    padding-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: #ddd;
+    font-size: 20px;
+}
+
+.cv-maker {
+    background-color: red;
+    border: 10px solid black;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px; /* Add margin-top to separate from content */
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Align items side-by-side on large screens */
+    align-items: center;
+    justify-content: flex-start;
+    height: calc(100vh - 60px); /* Adjust height to account for fixed navbar */
+    text-align: left;
+    padding: 20px;
+    margin-top: 60px; /* Add margin-top to ensure content is below navbar */
+}
+
+.myinfo {
+    margin-left: 20px;
+    text-align: left;
+    margin-right: 150px;
+    display: block;
+
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-left: 10px;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    margin-left: 100px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #f4f4f4;
+    letter-spacing: 10px;
+}
+
+h2 {
+    color: white;
+    letter-spacing: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #f4f4f4;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For screens less than 768px wide (tablets and mobile) */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        height: auto; /* Allow height to adjust based on content */
+        padding: 20px;
+        text-align: center; /* Center the text for better mobile layout */
+    }
+
+    .profile {
+        padding-left: 0; /* Remove padding to center the profile on mobile */
+        margin-top: 100px; /* Add space to push down the profile below navbar */
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+    }
+
+    .myinfo {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* For screens less than 480px wide (mobile phones) */
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+        padding: 0;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 10px;
+        text-align: center; /* Center text for small mobile screens */
+    }
+
+    .profile {
+        margin-top: 80px; /* Adjust space above profile picture */
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        letter-spacing: 5px;
+    }
+
+    h2 {
+        font-size: 1.2em;
+        letter-spacing: 5px;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .cv-maker {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
